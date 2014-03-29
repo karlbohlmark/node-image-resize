@@ -7,6 +7,7 @@ function resize (file, options, cb) {
     var height = options.height;
     var outfile = options.outfile
     if (!outfile) {
+        // Default naming: 'img.png' resized to 300x200 -> 'img_300x200.png'
         var size = height + 'x' + width;
         var lastDot = file.lastIndexOf(".");
         var ext = file.substring(lastDot, file.length);
