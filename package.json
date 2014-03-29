@@ -4,5 +4,8 @@
   "description": "",
   "main": "index.js",
   "author": "Karl Böhlmark <karl.bohlmark@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.2.0"
+  }
 }
