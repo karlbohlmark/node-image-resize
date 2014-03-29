@@ -1,0 +1,8 @@
+{
+  "name": "kb-resize",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Karl Böhlmark <karl.bohlmark@gmail.com>",
+  "license": "ISC"
+}
