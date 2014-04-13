@@ -16,7 +16,7 @@ function resize (file, options, cb) {
         outfile = file.substring(0, lastDot) + "_" + size + ext;
     }
     if (options.outdir) {
-      outfile = path.join(options.outdir, outfile);
+      outfile = path.join(options.outdir, path.basename(outfile));
     }
 
     sharp(file)

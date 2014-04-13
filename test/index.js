@@ -48,11 +48,29 @@ test('generates outfile name from dimensions', function (t) {
     t.equal(sharp.outfile, "file_100x200.png");
 });
 
-test('joins outdir to outfile ', function (t) {
+test('joins outdir to outfile', function (t) {
     t.plan(1);
 
     var target = {
         input: "file.png",
+        options: {
+            outdir: "resized",
+            width: 100,
+            height: 200    
+        }
+    }
+    resize(target.input, target.options, function () {
+        console.log('done')
+    })
+
+    t.equal(sharp.outfile, "resized/file_100x200.png");
+});
+
+test('handles absolute input file with outdir option', function (t) {
+    t.plan(1);
+
+    var target = {
+        input: "/some/path/file.png",
         options: {
             outdir: "resized",
             width: 100,
