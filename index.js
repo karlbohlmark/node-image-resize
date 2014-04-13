@@ -1,3 +1,5 @@
+var path = require("path");
+
 var sharp = require("sharp");
 
 module.exports = resize;
@@ -13,7 +15,9 @@ function resize (file, options, cb) {
         var ext = file.substring(lastDot, file.length);
         outfile = file.substring(0, lastDot) + "_" + size + ext;
     }
-    console.log("file:", file, "width", width, "height", height)
+    if (options.outdir) {
+      outfile = path.join(options.outdir, outfile);
+    }
     sharp(file)
         .resize(width, height)
         .write(outfile, cb);
