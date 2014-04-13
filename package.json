@@ -7,5 +7,12 @@
   "license": "ISC",
   "dependencies": {
     "sharp": "^0.2.0"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "devDependencies": {
+    "tape": "^2.12.3",
+    "sandboxed-module": "^0.3.0"
   }
 }
